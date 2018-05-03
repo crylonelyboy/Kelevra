@@ -1,31 +1,19 @@
-<?php
-
-$to = "arniusss@yahoo.com";
-
-if (isset($_POST['submit']))
-{
-    #Тут делаем проверки и выводим ошибки если, что то не так
-}
-else #Если ошибок не обнаружено переходим созданию письма
-{
-    $subject = "Kelevra";
-    $message = "Firstname: " . $_POST['fname'];
-	$message = "Lastname: " . $_POST['lname'];
-    $message .= "<br>Message: " . $_POST['message'];
-    $message .= "<br>Email: " . $_POST['email'];
- 
-    $headers  = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-type: text/html; charset=utf-8" . "\r\n";
-    $headers .= "From: " . $_POST['fname'] . " <" . $_POST['email'] . ">". $_POST['message'] ."\r\n";
- 
-    mail($to, $subject, $message, $headers);
-    if (!mail($to, $subject, $message, $headers))
-    {
-     #Вышла ошибка, сообщение не ушло
-    }
-    else
-    {
-     #Все ок!
-    }
+<?
+if((isset($_POST['fname'])&&$_POST['lname']!="")&&(isset($_POST['email'])&&$_POST['message']!="")){ //Проверка отправилось ли наше поля name и не пустые ли они
+        $to = 'arniusss@yahoo.com'; //Почта получателя, через запятую можно указать сколько угодно адресов
+        $subject = 'Kelevra (Github)'; //Загаловок сообщения
+        $message = '
+                <html>
+                    <head>
+                        <title>'.$subject.'</title>
+                    </head>
+                    <body>
+                        <p>Firstname: '.$_POST['fname'].'</p>
+                        <p>Lastname: '.$_POST['lname'].'</p>                        
+                    </body>
+                </html>'; //Текст нащего сообщения можно использовать HTML теги
+        $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
+        $headers .= "From: " . $_POST['fname'] . " <" . $_POST['email'] . ">". $_POST['message'] ."\r\n"; //Наименование и почта отправителя
+        mail($to, $subject, $message, $headers); //Отправка письма с помощью функции mail
 }
 ?>
