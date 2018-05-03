@@ -8,7 +8,7 @@ if (isset($_POST['submit']))
 }
 else #Если ошибок не обнаружено переходим созданию письма
 {
-     $subject = "Order";
+    $subject = "Kelevra";
     $message = "Firstname: " . $_POST['fname'];
 	$message = "Lastname: " . $_POST['lname'];
     $message .= "<br>Message: " . $_POST['message'];
