@@ -47,8 +47,8 @@ body {
     font-size: 15px;    
     line-height: 30px;
     font-weight: 400;       
-    color: #e888a8;
-    background-color: #111111;
+    color: #de2142;
+    background-color: #e888a8;
     overflow-x: hidden;
 }
 /*body {
@@ -68,7 +68,7 @@ body a {
 }
 
 body a:hover {
-    color: #ffffff;
+    color: #e888a8;
 }
 
 body img {
@@ -86,7 +86,7 @@ body img {
     width: 100%;
     height: 100%;
     z-index: 99999;
-    background-color: #111111;
+    background-color: #e888a8;
 }
 
 .doc-loader img {
@@ -107,7 +107,7 @@ p {
 }
 
 .section-info {
-    font-size: 22px;
+    font-size: 25px;
     line-height: 35px;
 }
 
@@ -142,7 +142,7 @@ a.button:hover {
 .content-left {
     position: fixed;
     width: 380px;
-    background-color: #222222;
+    background-color: #e888a8;
     height: 100vh;
     z-index: 1;
 }
@@ -523,7 +523,7 @@ img.my-info-signature {
 }
 
 .section {
-    background-color: #111111;
+    background-color: #e888a8;
     position: relative;
     padding-top: 150px;
 }
@@ -582,7 +582,7 @@ h2.section-title {
 h1.entry-title {
 	font-family: 'Nirvana';
     font-size: 200px;
-    line-height: 96px;
+    line-height: 100px;
     font-weight: 800;
     color: #de2142;
 }
@@ -919,7 +919,7 @@ h1.entry-title {
     margin-top: 40px;
     margin-bottom: 40px;
     line-height: 40px;
-    color: #e888a8;
+    color: #de2142;
     border-left: 10px solid;
     padding-left: 40px;
     max-width: 480px;
